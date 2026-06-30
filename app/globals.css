@@ -50,6 +50,7 @@ body {
   to { transform: rotate(360deg); }
 }
 
+
 .animate-float-y { animation: floatY 6s ease-in-out infinite; }
 .animate-float-y-slow { animation: floatYslow 7s ease-in-out infinite; }
 .animate-float-y-8 { animation: floatY 8s ease-in-out infinite; }
