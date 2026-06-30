@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-dm), system-ui, sans-serif;
+  color: #24323D;
+  background: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #A8D5BA;
+  color: #1c2a22;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes floatYslow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(18px); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.12) translate(20px, -16px); }
+}
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(46, 139, 87, 0.35); }
+  70% { box-shadow: 0 0 0 16px rgba(46, 139, 87, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 139, 87, 0); }
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+.animate-float-y { animation: floatY 6s ease-in-out infinite; }
+.animate-float-y-slow { animation: floatYslow 7s ease-in-out infinite; }
+.animate-float-y-8 { animation: floatY 8s ease-in-out infinite; }
+.animate-blob { animation: blob 14s ease-in-out infinite; }
+.animate-blob-slow { animation: blob 18s ease-in-out infinite; }
+.animate-pulse-ring { animation: pulseRing 2s infinite; }
